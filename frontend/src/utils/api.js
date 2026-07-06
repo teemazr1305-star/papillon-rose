@@ -5,7 +5,7 @@
  * same domain as the API.
  */
 
-const BASE = '/api';
+const BASE = import.meta.env.VITE_API_URL + '/api';
 
 async function request(path, { method = 'GET', body, token, isFormData = false } = {}) {
   const headers = {};
