@@ -1,0 +1,192 @@
+/* ==========================================================================
+   ABOUT PAGE
+   ========================================================================== */
+
+.about-hero {
+  background: linear-gradient(160deg, var(--color-beige), var(--surface-base));
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-xl);
+  margin-bottom: var(--sp-2xl);
+}
+
+@media (min-width: 768px) {
+  .about-story { grid-template-columns: 1.2fr 0.8fr; align-items: center; }
+}
+
+.about-logo-frame {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  padding: var(--sp-lg);
+  background: linear-gradient(160deg, var(--color-beige), white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-2xl);
+}
+
+@media (min-width: 640px) {
+  .about-values { grid-template-columns: repeat(3, 1fr); }
+}
+
+.about-value-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: var(--sp-lg) var(--sp-md);
+  background: var(--surface-raised);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.about-motto { text-align: center; padding: var(--sp-xl) 0; }
+
+/* ==========================================================================
+   FAQ PAGE
+   ========================================================================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-item {
+  background: var(--surface-raised);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  transition: box-shadow var(--duration-base) var(--ease-soft);
+}
+
+.faq-item.is-open { box-shadow: var(--shadow-sm); }
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--sp-sm) var(--sp-md);
+  text-align: right;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  gap: var(--sp-sm);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  transition: transform var(--duration-base) var(--ease-soft);
+  color: var(--text-muted);
+}
+
+.faq-item.is-open .faq-chevron { transform: rotate(180deg); }
+
+.faq-answer {
+  padding: 0 var(--sp-md) var(--sp-md);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.75;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: var(--sp-sm);
+}
+
+/* ==========================================================================
+   CONTACT PAGE
+   ========================================================================== */
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-sm);
+  margin-bottom: var(--sp-xl);
+}
+
+@media (min-width: 640px) {
+  .contact-channels { grid-template-columns: repeat(3, 1fr); }
+}
+
+.contact-channel-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-sm);
+  padding: var(--sp-md);
+  background: var(--surface-raised);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  transition: transform var(--duration-base) var(--ease-soft), box-shadow var(--duration-base) var(--ease-soft);
+}
+
+.contact-channel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-channel-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-hours {
+  background: var(--surface-sunken);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-lg);
+}
+
+.contact-hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-sm);
+  font-size: var(--fs-sm);
+}
+
+/* ==========================================================================
+   REVIEWS PAGE
+   ========================================================================== */
+
+.reviews-page-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-sm);
+}
+
+@media (min-width: 640px) {
+  .reviews-page-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .reviews-page-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ==========================================================================
+   FEATURED PRODUCTS SECTION LINK
+   ========================================================================== */
+
+.featured-products-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--accent-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.featured-products-link:hover { opacity: 0.8; }

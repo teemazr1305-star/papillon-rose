@@ -1,0 +1,23 @@
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: var(--sp-lg);
+  left: var(--sp-lg);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  color: var(--text-on-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  z-index: 90;
+  transition: transform var(--duration-fast) var(--ease-soft),
+              opacity var(--duration-fast) var(--ease-soft);
+}
+
+.back-to-top:hover {
+  transform: translateY(-3px);
+  background: var(--accent-primary);
+}
