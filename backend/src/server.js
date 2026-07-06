@@ -4,10 +4,15 @@ const cors = require('cors');
 const path = require('path');
 const fs = require('fs');
 
-const { init } = require('./db/database');
+const { init, db } = require('./db/database');
 
 // Make sure DB tables exist before anything else runs
 init();
+const count = db.prepare('SELECT COUNT(*) AS total FROM products').get();
+
+if (count.total === 0) {
+  require('./db/seed');
+}
 
 const productsRouter = require('./routes/products');
 const categoriesRouter = require('./routes/categories');
